@@ -1,0 +1,142 @@
+:root {
+  /* Primary */
+  --cyan: hsl(180, 62%, 55%);
+  --red: hsl(0, 78%, 62%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 100%, 100%);
+  --box-shadow: hsl(229, 6%, 80%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--very-light-gray);
+  color: var(--grayish-blue);
+  font-size: 1.5rem;
+  height: 100vh;
+}
+
+main {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 5rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+header h1 {
+  color: var(--very-dark-blue);
+  font-weight: 200;
+  font-size: 3.6rem;
+  margin-top: 3rem;
+}
+
+header h2 {
+  color: var(--very-dark-blue);
+  font-weight: 600;
+  font-size: 3.6rem;
+  margin-bottom: 1.8rem;
+}
+
+header p {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.section {
+  background-color: var(--white);
+  border-radius: 0.6rem;
+  padding: 3rem;
+  text-align: right;
+  box-shadow: 1px 10px 30px var(--box-shadow);
+}
+
+.section h3 {
+  color: var(--very-dark-blue);
+  text-align: left;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+}
+
+.section p {
+  text-align: left;
+  padding-bottom: 4rem;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.section-one {
+  border-top: 0.4rem solid var(--cyan);
+  align-self: center;
+}
+
+.section-two {
+  border-top: 0.4rem solid var(--red);
+}
+
+.section-three {
+  border-top: 0.4rem solid var(--orange);
+}
+
+.section-four {
+  border-top: 0.4rem solid var(--blue);
+  align-self: center;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 1.3rem;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  header h1,
+  header h2 {
+    font-size: 2.6rem;
+  }
+
+  header p {
+    padding: 0 4rem;
+  }
+
+  .section p {
+    padding-bottom: 3rem;
+  }
+}
